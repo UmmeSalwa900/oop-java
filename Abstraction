@@ -1,0 +1,30 @@
+abstract class Shapearea{
+    abstract void Area();
+}
+class triangle extends Shapearea{
+    void Area(){
+        float x=2.0f;
+        float y=3.0f;
+        double Area=0.5*x*y;
+        System.out.println("area of the triangle:"+ Area);
+        
+    }
+}
+class rectangle extends Shapearea{
+    void Area(){
+        int x=2;
+        int y=3;
+        int area=x*y;
+        System.out.println("areaof the rectangle:"+ area);
+        
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+  triangle A = new triangle();
+        A.Area();
+        rectangle B = new rectangle();
+        B.Area();
+    }
+}
