@@ -1,0 +1,54 @@
+interface Shape {
+    double calculateArea();
+    double calculatePerimeter();
+}
+
+class Rectangle implements Shape {
+    double length;
+    double width;
+    
+    Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+    
+    @Override
+    public double calculateArea() {
+        return length * width;
+    }
+    
+    @Override
+    public double calculatePerimeter() {
+        return 2 * (length + width);
+    }
+}
+
+class Circle implements Shape {
+    double radius;
+    
+    Circle(double radius) {
+        this.radius = radius;
+    }
+    
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+    
+    @Override
+    public double calculatePerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(7, 9);
+        System.out.println("Area of a rectangle: " + rectangle.calculateArea());
+        System.out.println("Perimeter of rectangle: " + rectangle.calculatePerimeter());
+        
+        Circle circle = new Circle(6);
+        System.out.println("Area of a circle: " + circle.calculateArea());
+        System.out.println("Perimeter of circle: " + circle.calculatePerimeter());
+    }
+}
