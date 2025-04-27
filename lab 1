@@ -1,0 +1,24 @@
+class Result {
+    private float x;
+    private float y;
+    private float total;
+
+    private float getdata(float val1, float val2) {
+        x = val1;
+        y = val2;
+        total = x + y;
+        return total;
+    }
+
+    public void displaydata() {
+        float val3 = getdata(44, 45);
+        System.out.println("Total: " + val3);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Result S = new Result();
+        S.displaydata();
+    }
+}
